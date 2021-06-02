@@ -1,4 +1,4 @@
-# jakartaeeSample
+# jakartaee9.1Sample
 - Rest
 - EJB
 - JSF
