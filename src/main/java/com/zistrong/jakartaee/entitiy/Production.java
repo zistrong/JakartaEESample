@@ -2,11 +2,16 @@ package com.zistrong.jakartaee.entitiy;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.NamedQueries;
+import jakarta.persistence.NamedQuery;
 import jakarta.validation.constraints.NotNull;
 
 import java.io.Serializable;
 
 @Entity
+@NamedQueries(
+        @NamedQuery(name = "Production.queryByName", query = "select p from Production p where p.name = :name")
+)
 public class Production implements Serializable {
     @Id
     private Long id;
