@@ -4,10 +4,11 @@
 .idea
 */*.log
 buildNumber.properties
-*/target/
+/target/
 *.DS_Store
 *.classpath
 *.settings
 *.project
 docker-tool/dependency-check-report.html
 */.factorypath
+/target/*
