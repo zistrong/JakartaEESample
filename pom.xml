@@ -19,7 +19,7 @@
         <hibernate-validator.version>7.0.5.Final</hibernate-validator.version>
         <glassfish-embedded-all.version>6.1.0</glassfish-embedded-all.version>
         <jersey-container-servlet.version>3.0.8</jersey-container-servlet.version>
-        <commons-fileupload.version>1.3.3</commons-fileupload.version>
+        <commons-fileupload.version>1.4</commons-fileupload.version>
     </properties>
     <dependencies>
         <dependency>
