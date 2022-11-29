@@ -8,11 +8,16 @@ import jakarta.mvc.Models;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 @Path("/controller")
 @Controller
 public class MyController {
 
+
+
+    private static final Logger LOGGER = LogManager.getLogger(MyController.class);
 
     @Inject
     Models models;
@@ -27,7 +32,8 @@ public class MyController {
     @GET
     @Path("/")
     public String index() {
-        System.out.println(httpServletRequest.getServletPath());
+
+        LOGGER.info(httpServletRequest.getServletPath());
         Production production = new Production();
         production.setId(1L);
         production.setName("p1");

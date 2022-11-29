@@ -3,6 +3,7 @@ package com.zistrong.jakartaee.service;
 
 import com.zistrong.jakartaee.entitiy.Production;
 import jakarta.ejb.Stateless;
+import jakarta.inject.Inject;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 
@@ -12,6 +13,12 @@ import java.util.List;
 @Stateless
 public class FirstService implements Serializable {
 
+
+    @Inject
+    private DemoItem demoItem;
+
+    @Inject
+    private Demo2Item demo2Item;
 
     @PersistenceContext(unitName = "jee")
     EntityManager entityManager;
@@ -28,8 +35,9 @@ public class FirstService implements Serializable {
     }
 
     public List<Production> getProductions() {
-        List<Production> productions =  entityManager.createQuery("select a from Production a", Production.class).getResultList();
-        return productions;
+        demoItem.list();
+        demo2Item.list();
+        return entityManager.createQuery("select a from Production a", Production.class).getResultList();
     }
 
 }

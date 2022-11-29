@@ -6,7 +6,6 @@ import com.zistrong.jakartaee.interceptor.RestInterceptorBinding;
 import com.zistrong.jakartaee.service.FirstService;
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
-import jakarta.interceptor.Interceptor;
 import jakarta.interceptor.Interceptors;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;

@@ -1,13 +1,19 @@
 package com.zistrong.jakartaee.listener;
 
 import jakarta.faces.event.*;
+import jakarta.servlet.ServletContextEvent;
+import jakarta.servlet.ServletContextListener;
 import jakarta.servlet.annotation.WebListener;
 import jakarta.servlet.http.HttpSessionEvent;
 import jakarta.servlet.http.HttpSessionListener;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 @WebListener
-public class SessionDataSaveAndRestoreListener implements HttpSessionListener, SystemEventListener {
+public class SessionDataSaveAndRestoreListener implements HttpSessionListener, SystemEventListener, ServletContextListener {
 
+
+    private static final Logger LOGGER = LogManager.getLogger(SessionDataSaveAndRestoreListener.class);
 
     @Override
     public void processEvent(SystemEvent systemEvent) throws AbortProcessingException {
@@ -24,11 +30,22 @@ public class SessionDataSaveAndRestoreListener implements HttpSessionListener, S
 
     @Override
     public void sessionCreated(HttpSessionEvent httpSessionEvent) {
-        System.out.println("sessionCreated: " + httpSessionEvent.getSession().getId());
+        LOGGER.info("sessionCreated: {}", httpSessionEvent.getSession().getId());
     }
 
     @Override
     public void sessionDestroyed(HttpSessionEvent httpSessionEvent) {
-        System.out.println("sessionDestroyed: " + httpSessionEvent.getSession().getId());
+        LOGGER.info("sessionDestroyed: {}", httpSessionEvent.getSession().getId());
+    }
+
+    @Override
+    public void contextInitialized(ServletContextEvent sce) {
+
+    }
+
+    @Override
+    public void contextDestroyed(ServletContextEvent sce) {
+
+
     }
 }
