@@ -9,9 +9,9 @@ import jakarta.validation.constraints.NotNull;
 import java.io.Serializable;
 
 @Entity
-@NamedQueries(
+@NamedQueries({
         @NamedQuery(name = "Production.queryByName", query = "select p from Production p where p.name = :name"),
-        @NamedQuery(name = "Production.queryById", query = "select p from Production p where p.id = :id")
+        @NamedQuery(name = "Production.queryById", query = "select p from Production p where p.id = :id")}
 )
 public class Production implements Serializable {
     @Id
