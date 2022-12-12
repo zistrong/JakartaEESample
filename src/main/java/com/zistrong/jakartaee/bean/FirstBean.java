@@ -5,6 +5,8 @@ import jakarta.annotation.PostConstruct;
 import jakarta.ejb.EJB;
 import jakarta.faces.view.ViewScoped;
 import jakarta.inject.Named;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.Serializable;
 
@@ -13,6 +15,7 @@ import java.io.Serializable;
 public class FirstBean implements Serializable {
 
 
+    private Logger logger = LoggerFactory.getLogger(FirstBean.class);
 
     private String value;
 
@@ -28,6 +31,7 @@ public class FirstBean implements Serializable {
 
     @PostConstruct
     public void init() {
+        logger.info("start....");
     }
 
     @EJB

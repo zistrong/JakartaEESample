@@ -1,4 +1,5 @@
-# jakartaee9.1Sample
+# JakartaEE10 Sample
+run in Glassfish7.x
 - Rest
 - EJB
 - JSF
@@ -8,3 +9,4 @@
 
 how to run:<br/>
   add a datasource in JakartaEE container named: **jdbc/jee**
+

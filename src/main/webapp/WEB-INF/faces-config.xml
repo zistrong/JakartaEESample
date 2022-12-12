@@ -8,62 +8,11 @@
             <default-locale>en_US</default-locale>
             <supported-locale>zh_CN</supported-locale>
         </locale-config>
-
         <system-event-listener>
             <system-event-listener-class>com.zistrong.jakartaee.listener.SessionDataSaveAndRestoreListener
             </system-event-listener-class>
             <system-event-class>jakarta.faces.event.PostConstructApplicationEvent</system-event-class>
             <source-class>jakarta.faces.application.Application</source-class>
         </system-event-listener>
-
-        <system-event-listener>
-            <system-event-listener-class>com.zistrong.jakartaee.listener.SessionDataSaveAndRestoreListener
-            </system-event-listener-class>
-            <system-event-class>jakarta.faces.event.PreRenderViewEvent</system-event-class>
-            <source-class>jakarta.faces.application.Application</source-class>
-        </system-event-listener>
-
-        <system-event-listener>
-            <system-event-listener-class>com.zistrong.jakartaee.listener.SessionDataSaveAndRestoreListener
-            </system-event-listener-class>
-            <system-event-class>jakarta.faces.event.PreDestroyApplicationEvent</system-event-class>
-            <source-class>jakarta.faces.application.Application</source-class>
-        </system-event-listener>
     </application>
-
-    <factory>
-
-    </factory>
-    <converter>
-        <converter-for-class>java.lang.String</converter-for-class>
-        <converter-class>com.zistrong.jakartaee.faces.JakartaEEStringConverter</converter-class>
-    </converter>
-    <component>
-        <component-type>org.primefaces.component.InputText</component-type>
-        <component-class>com.zistrong.jakartaee.faces.JakartaEEInputText</component-class>
-    </component>
-    <behavior>
-        <behavior-id>jakarta.faces.behavior.Ajax</behavior-id>
-        <behavior-class>com.zistrong.jakartaee.faces.JakartaEEAjaxBehavior</behavior-class>
-    </behavior>
-    <render-kit>
-        <renderer>
-            <component-family>org.primefaces.component</component-family>
-            <renderer-type>org.primefaces.component.inputtext.InputTextRenderer</renderer-type>
-            <renderer-class>com.zistrong.jakartaee.faces.JakartaEEInputTextRenderer</renderer-class>
-        </renderer>
-    </render-kit>
-
-    <validator>
-        <validator-id>percentValidator</validator-id>
-        <validator-class>com.zistrong.jakartaee.faces.PercentValidator</validator-class>
-        <attribute>
-            <attribute-name>min</attribute-name>
-            <attribute-class>java.lang.Double</attribute-class>
-        </attribute>
-        <attribute>
-            <attribute-name>max</attribute-name>
-            <attribute-class>java.lang.Double</attribute-class>
-        </attribute>
-    </validator>
 </faces-config>

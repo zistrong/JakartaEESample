@@ -1,20 +1,20 @@
 package com.zistrong.jakartaee.schedule;
 
-import com.zistrong.jakartaee.filter.RestLoginFilter;
 import jakarta.ejb.Schedule;
 import jakarta.ejb.Singleton;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.text.DateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 @Singleton
 public class JakartaEESchedule {
-    private static final Logger LOGGER = LogManager.getLogger(RestLoginFilter.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(JakartaEESchedule.class);
 
     @Schedule(second = "30", minute = "*", hour = "*")
     public void scheduleRun() {
-        LOGGER.info("now = {}", DateFormat.getDateInstance().format(new Date()));
+        LOGGER.info("now = {}", DateFormat.getDateInstance(2, Locale.getDefault()).format(new Date()));
     }
 }
