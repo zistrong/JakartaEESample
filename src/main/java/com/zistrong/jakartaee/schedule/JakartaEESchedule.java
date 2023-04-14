@@ -13,7 +13,7 @@ import java.util.Locale;
 public class JakartaEESchedule {
     private static final Logger LOGGER = LoggerFactory.getLogger(JakartaEESchedule.class);
 
-    @Schedule(second = "30", minute = "*", hour = "*")
+    @Schedule(second = "30", minute = "*", hour = "*", persistent = false)
     public void scheduleRun() {
         LOGGER.info("now = {}", DateFormat.getDateInstance(2, Locale.getDefault()).format(new Date()));
     }
