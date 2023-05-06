@@ -18,7 +18,7 @@
         <primefaces.version>12.0.0</primefaces.version>
         <postgresql.version>42.6.0</postgresql.version>
         <hibernate-validator.version>8.0.0.Final</hibernate-validator.version>
-        <glassfish-embedded-all.version>7.0.3</glassfish-embedded-all.version>
+        <glassfish-embedded-all.version>7.0.4</glassfish-embedded-all.version>
         <jersey-container-servlet.version>3.1.1</jersey-container-servlet.version>
         <commons-fileupload.version>1.2.1</commons-fileupload.version>
         <log4j2.version>2.17.1</log4j2.version>
@@ -97,7 +97,7 @@
         <dependency>
             <groupId>org.glassfish.jersey.media</groupId>
             <artifactId>jersey-media-multipart</artifactId>
-            <version>3.1.0</version>
+            <version>3.1.1</version>
         </dependency>
 
         <dependency>
