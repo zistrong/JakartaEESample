@@ -21,7 +21,7 @@
         <glassfish-embedded-all.version>7.0.6</glassfish-embedded-all.version>
         <jersey-container-servlet.version>3.1.1</jersey-container-servlet.version>
         <commons-fileupload.version>1.2.1</commons-fileupload.version>
-        <log4j2.version>2.17.1</log4j2.version>
+        <log4j2.version>2.19.0</log4j2.version>
         <junit.version>4.11</junit.version>
         <jakarta.mvc-api.version>2.1.0</jakarta.mvc-api.version>
         <maven-war-plugin.version>3.3.2</maven-war-plugin.version>
